@@ -1,0 +1,11 @@
+body {
+    margin-top: 10px;
+}
+
+[class*="col"] {
+    margin-bottom: 20px;
+}
+
+img {
+    width: 100%;
+}
