@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JQuery 1</title>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+        /* Style pour l'exemple*/
+        
+        body {
+            padding-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="alert alert-warning col-lg-4" style="display: none">
+            <button type="button" class="close">×</button>
+            <h4>Attention!</h4>
+            <p>
+                Petite information importante !
+            </p>
+        </div>
+        <div class="col-lg-3">
+            <input type="button" class="btn btn-primary" id="afficher" value="Afficher l'alerte">
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.js"></script>
+    <script>
+        $(function() {
+            $("#afficher").click(function() {
+                $("#afficher").hide();
+                $(".alert").show("slow");
+            });
+            $(".close").click(function() {
+                $(".alert").hide("slow");
+                $("#afficher").show();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
