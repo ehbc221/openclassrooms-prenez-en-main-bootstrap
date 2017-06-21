@@ -94,21 +94,16 @@
         </section>
         <section class="row">
             <div class="media col-lg-12">
-                <div class="pull-right">
-                    <iframe width="420" height="320" src="http://www.youtube.com/embed/VmnIeLmjuHA" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="media-body pull-right">
-                    <div class="btn-group" data-toggle="buttons">
-                        <label class="btn btn-primary">
-                <input type="radio">Vidéo 1
-              </label>
-                        <label class="btn btn-primary">
-                <input type="radio">Vidéo 2
-              </label>
-                        <label class="btn btn-primary">
-                <input type="radio">Vidéo 3
-              </label>
-                    </div>
+                <div class="btn-group pull-right" data-toggle="buttons">
+                    <label class="btn btn-primary active">
+                        <input type="radio">Vidéo 1
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="radio">Vidéo 2
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="radio">Vidéo 3
+                    </label>
                 </div>
             </div>
         </section>
@@ -314,19 +309,19 @@
                                 <div class="radio">
                                     <label for="ami" class="radio">
                                     <input type="radio" name="origine" value="ami" id="ami">
-                                    Par un ami 
+                                    Par un ami
                                     </label>
                                 </div>
                                 <div class="radio">
                                     <label for="web" class="radio">
                                     <input type="radio" name="origine" value="web" id="web">
-                                    Sur le web 
+                                    Sur le web
                                     </label>
                                 </div>
                                 <div class="radio">
                                     <label for="hasard" class="radio">
                                     <input type="radio" name="origine" value="hasard" id="hasard">
-                                    Par hasard 
+                                    Par hasard
                                     </label>
                                 </div>
                                 <div class="radio">
@@ -377,6 +372,10 @@
             $('.btn-group .btn:nth-child(3)').click(function() {
                 $('iframe').attr('src', 'http://www.youtube.com/embed/yua4jzecCIE');
             })
+            $('a').click(function(e) {
+                e.preventDefault();
+                $(this).tab('show');
+            });
         });
     </script>
 </body>

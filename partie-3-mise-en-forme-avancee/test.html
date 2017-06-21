@@ -12,6 +12,9 @@
     <div class="container">
 
 
+        <br>
+        <hr>
+        <br>
         <!-- Faire apparaître ou disparaître un contenu lors d'une action de l'utilisateur, ici un simple clic -->
         <div class="row">
             <a href="#item" data-toggle="collapse">Changer</a>
@@ -23,6 +26,9 @@
         </div>
 
 
+        <br>
+        <hr>
+        <br>
         <!-- La même résultat en utilisant jQuery -->
         <div class="row">
             <a>Changer</a>
@@ -41,6 +47,9 @@
         </div>
 
 
+        <br>
+        <hr>
+        <br>
         <!-- Faire apparaître un message lorsque le contenu est visible : -->
         <div class="row">
             <a>Changer</a>
@@ -62,6 +71,9 @@
         </div>
 
 
+        <br>
+        <hr>
+        <br>
         <!-- Des sous-menus -->
         <div class="row">
             <style type="text/css">
@@ -141,6 +153,9 @@
 
 
 
+        <br>
+        <hr>
+        <br>
         <!-- Simple Modal -->
         <div class="row">
             <button data-toggle="modal" href="#infos" class="btn btn-primary">Informations</button>
@@ -164,117 +179,252 @@
 
 
 
-        <!-- Modal avec olusieurs sections -->
+        <br>
+        <hr>
+        <br>
         <div class="row">
-            <!DOCTYPE HTML>
-            <html>
-
-            <head>
-                <meta charset="utf-8">
-                <link href="assets/css/bootstrap.css" rel="stylesheet">
-                <style type="text/css">
-                    body {
-                        padding-top: 20px;
-                    }
-                </style>
-            </head>
-
-            <body>
-                <div class="container">
-                    <div class="btn-group">
-                        <button id="page1" type="button" class="btn btn-primary">Page 1</button>
-                        <button id="page2" type="button" class="btn btn-primary">Page 2</button>
-                        <button id="page3" type="button" class="btn btn-primary">Page 3</button>
-                    </div>
-                    <div class="modal fade" id="infos">
-                        <div class="modal-dialog">
-                            <div class="modal-content"></div>
-                        </div>
-                    </div>
+            <!-- Modal avec olusieurs sections -->
+            <div class="btn-group">
+                <button id="page1" type="button" class="btn btn-primary">Page 1</button>
+                <button id="page2" type="button" class="btn btn-primary">Page 2</button>
+                <button id="page3" type="button" class="btn btn-primary">Page 3</button>
+            </div>
+            <div class="modal fade" id="infos">
+                <div class="modal-dialog">
+                    <div class="modal-content"></div>
                 </div>
-                <script src="assets/js/jquery.js"></script>
-                <script src="assets/js/bootstrap.min.js"></script>
-                <script>
-                    $("body").on("hidden.bs.modal", ".modal", function() {
-                        $(this).removeData("bs.modal");
-                    });
-                    $("#page1").click(function() {
-                        $("#infos").modal({
-                            remote: "remote1.html"
-                        }, "show");
-                    });
-                    $("#page2").click(function() {
-                        $("#infos").modal({
-                            remote: "remote2.html"
-                        }, "show");
-                    });
-                    $("#page3").click(function() {
-                        $("#infos").modal({
-                            remote: "remote3.html"
-                        }, "show");
-                    });
-                </script>
-            </body>
+            </div>
+        </div>
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script>
+            $("body").on("hidden.bs.modal", ".modal", function() {
+                $(this).removeData("bs.modal");
+            });
+            $("#page1").click(function() {
+                $("#infos").modal({
+                    remote: "remote1.html"
+                }, "show");
+            });
+            $("#page2").click(function() {
+                $("#infos").modal({
+                    remote: "remote2.html"
+                }, "show");
+            });
+            $("#page3").click(function() {
+                $("#infos").modal({
+                    remote: "remote3.html"
+                }, "show");
+            });
+        </script>
 
-            </html>
+
+        <br>
+        <hr>
+        <br>
+        <!-- Onglets : Transition progressive -->
+        <div class="row">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#accueil" data-toggle="tab">Accueil</a></li>
+                <li class="disabled"><a href="#livres">Livres</a></li>
+                <li><a href="#temoignages" data-toggle="tab">Témoignages</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="accueil">Texte d'accueil</div>
+                <div class="tab-pane" id="livres">Tous les livres</div>
+                <div class="tab-pane" id="temoignages">Tous les temoignages</div>
+            </div>
+        </div>
+
+
+        <br>
+        <hr>
+        <br>
+        <!-- Onglets : Transition progressive -->
+        <div class="row">
+            <ul class="nav nav-pills">
+                <li class="active"><a href="#accueil2" data-toggle="tab">Accueil</a></li>
+                <li><a href="#livres2" data-toggle="tab">Livres</a></li>
+                <li><a href="#temoignages2" data-toggle="tab">Témoignages</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="accueil2">Texte d'accueil</div>
+                <div class="tab-pane fade" id="livres2">Tous les livres</div>
+                <div class="tab-pane fade" id="temoignages2">Tous les témoignages</div>
+            </div>
+        </div>
+
+
+        <br>
+        <hr>
+        <br>
+        <!-- Onglets : Justification -->
+        <div class="row">
+            <div class="col-lg-8">
+                <ul class="nav nav-pills nav-justified">
+                    <li class="active"><a href="#accueil3" data-toggle="tab">Accueil3</a></li>
+                    <li><a href="#livres3" data-toggle="tab">Livres3</a></li>
+                    <li><a href="#temoignages3" data-toggle="tab">Témoignages</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="accueil3">Texte d'accueil</div>
+                    <div class="tab-pane" id="livres3">Tous les livres</div>
+                    <div class="tab-pane" id="temoignages3">Tous les témoignages</div>
+                </div>
+            </div>
+        </div>
+
+
+        <br>
+        <hr>
+        <br>
+        <!-- Bouton bascule -->
+        <div class="row">
+            <a class="btn btn-success">Simple Bascule</a>
+            <a class="btn btn-success" data-toggle="button">Simple Bascule</a>
         </div>
 
 
 
+        <br>
+        <hr>
+        <br>
+        <!-- Boutons effet "checkbox" -->
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-success">
+                <input type="checkbox">Un
+            </label>
+            <label class="btn btn-success">
+                <input type="checkbox">Deux
+            </label>
+            <label class="btn btn-success">
+                <input type="checkbox">Trois
+            </label>
+        </div>
+
+
+        <br>
+        <hr>
+        <br>
+        <!-- Boutons effet "radio" -->
+        <div class="row">
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-success">
+            <input type="radio">Un
+            </label>
+                <label class="btn btn-success">
+                <input type="radio">Deux
+            </label>
+                <label class="btn btn-success">
+                <input type="radio">Trois
+            </label>
+            </div>
+        </div>
+
+
+
+        <br>
+        <hr>
+        <br>
+        <!-- Boutons pour attente de processus -->
+        <div class="row">
+            <a class="btn btn-primary" data-loading-text="Chargement...">Cliquez !</a>
+            <script>
+                $(function() {
+                    $('a').click(function() {
+                        with($(this)) {
+                            button('loading');
+                            setTimeout(function() {
+                                button('reset');
+                            }, 4000);
+                        }
+                    })
+                });
+            </script>
+        </div>
+
+
+
+        <br>
+        <hr>
+        <br>
+        <!-- Nous avons une image lourde à charger, et nous voulons que le bouton change d'état le temps de chargement de l'image.  -->
+        <div class="row">
+            <a class="btn btn-primary" data-loading-text="Chargement en cours...">Chargez l'image !</a>
+            <img id="mon_image">
+            <script>
+                $(function() {
+                    $('a').click(function() {
+                        with($(this)) {
+                            if (hasClass('btn-primary')) {
+                                removeClass('btn-primary').addClass('btn-danger').button('loading');
+                                var image = new Image();
+                                image.onload = function() {
+                                    removeClass('btn-danger').addClass('btn-primary').button('reset');
+                                    $("#mon_image").attr({
+                                        src: "images/legumes.jpg"
+                                    });
+                                };
+                                image.src = "images/legumes.jpg";
+                            }
+                        }
+                    })
+                });
+            </script>
+        </div>
+
+
+
+        <br>
+        <hr>
+        <br>
         <!--  -->
         <div class="row"></div>
 
 
 
+        <br>
+        <hr>
+        <br>
         <!--  -->
         <div class="row"></div>
 
 
 
+        <br>
+        <hr>
+        <br>
         <!--  -->
         <div class="row"></div>
 
 
 
+        <br>
+        <hr>
+        <br>
         <!--  -->
         <div class="row"></div>
 
 
 
+        <br>
+        <hr>
+        <br>
         <!--  -->
         <div class="row"></div>
 
 
 
+        <br>
+        <hr>
+        <br>
         <!--  -->
         <div class="row"></div>
 
 
-
-        <!--  -->
-        <div class="row"></div>
-
-
-
-        <!--  -->
-        <div class="row"></div>
-
-
-
-        <!--  -->
-        <div class="row"></div>
-
-
-
-        <!--  -->
-        <div class="row"></div>
-
-
-
-        <!--  -->
-        <div class="row"></div>
-
-
+        <br>
+        <hr>
+        <br>
 
 
     </div>
